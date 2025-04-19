@@ -1,4 +1,3 @@
-
 import Layout from '../components/layout/Layout'
 import { Header } from '../components/header/Header'
 import { Card, Search } from '../components/ui';
