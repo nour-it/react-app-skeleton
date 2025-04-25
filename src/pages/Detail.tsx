@@ -1,6 +1,6 @@
 import Layout from '../components/layout/Layout';
 import { Header } from '../components/header/Header';
-import { Filter } from '../components/ui/Filter';
+import { Filter } from '../components/ui';
 
 const SectionColors = () => {
   return (

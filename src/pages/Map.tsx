@@ -2,7 +2,7 @@ import { Header } from "../components/header/Header";
 import Layout from "../components/layout/Layout";
 import { BottomNavigation } from "../components/nav";
 import { Card } from "../components/ui";
-import { Filter } from "../components/ui/Filter";
+import { Filter } from "../components/ui";
 
 const items = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 

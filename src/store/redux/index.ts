@@ -14,12 +14,12 @@ initDatabase();
 const indexedDBMiddleware: Middleware = store => next => action => {
     const result = next(action);
     const state = store.getState();
-    
+
     // Sauvegarder l'état dans IndexedDB
     Object.keys(state).forEach(key => {
         dbService.set(key, state[key]);
     });
-    
+
     return result;
 };
 
@@ -28,7 +28,7 @@ const reducers = Object.entries(slices).reduce((acc, [name, slice]) => {
     return acc;
 }, {} as { [key: string]: any });
 
- const store = configureStore({
+const store = configureStore({
     reducer: combineReducers({ ...reducers }),
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(indexedDBMiddleware),
     preloadedState: Object.keys(reducers).reduce(async (acc, key) => {

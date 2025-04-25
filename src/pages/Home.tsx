@@ -48,7 +48,7 @@ interface SectionListeProps {
 const SectionListe: React.FC<SectionListeProps> = ({ title, items, direction, card }) => {
   const directions = {
     x: 'flex-row',
-    y: 'flex-col',
+    y: 'flex-wrap  md:justify-center',
   }
   return (
     <section>

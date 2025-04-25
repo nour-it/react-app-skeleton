@@ -7,7 +7,7 @@ interface FilterProps {
     filter?: string
 }
 
-export const Filter: React.FC<FilterProps> = ({
+ const Filter: React.FC<FilterProps> = ({
     options,
     selectedOption,
     onOptionChange,
@@ -72,3 +72,5 @@ export const Filter: React.FC<FilterProps> = ({
     }
 
 };
+
+export default Filter;

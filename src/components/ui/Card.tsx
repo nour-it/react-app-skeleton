@@ -6,10 +6,10 @@ interface CardProps {
   onClick?: () => void;
   item?: any;
   card: string;
-  key?: string | number;
+  key?: string;
 }
 
-const Card = ({ /*children, className = '', onClick,*/ card = "1", /*item,*/ key }: CardProps) => {
+const Card = ({ /*children, className = '', onClick,*/ card = "1", /*item,*/ key = "" }: CardProps) => {
   switch (card) {
     case "3":
       return (<div key={key} className="border p-4 rounded-lg min-h-20 min-w-80 bg-gray-200">
@@ -20,7 +20,7 @@ const Card = ({ /*children, className = '', onClick,*/ card = "1", /*item,*/ key
 
 
     case "2":
-      return (<div key={key} className="border p-4 rounded-lg min-h-40 min-w-80 bg-gray-200">
+      return (<div key={key} className="border p-4 rounded-lg min-h-40 min-w-96 bg-gray-200">
         <h3 className="font-bold"></h3>
         <p></p>
       </div>)
